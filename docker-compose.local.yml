@@ -1,0 +1,9 @@
+services:
+  gemini-web2api:
+    build: .
+    container_name: gemini-web2api
+    ports:
+      - "8081:8081"
+    environment:
+      GEMINI_WEB2API_API_KEY: ${GEMINI_WEB2API_API_KEY:?Set GEMINI_WEB2API_API_KEY before starting}
+    restart: unless-stopped

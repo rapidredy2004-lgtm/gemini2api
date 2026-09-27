@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: gemini-web2api
+    runtime: docker
+    plan: free
+    healthCheckPath: /
+    envVars:
+      - key: PORT
+        value: "8081"
+      - key: GEMINI_WEB2API_API_KEY
+        sync: false
